@@ -1,0 +1,25 @@
+{
+    "user" : [
+        {
+            "name": "mihir",
+            "address": "ahmedabad",
+            "email": "mihir@gmail.com",
+            "contact": "1234567890",
+            "id": "1"
+        },
+        {
+            "name": "juber",
+            "address": "ahmedabad",
+            "email": "juber@gmail.com",
+            "contact": "1234567890",
+            "id": "2"
+        },
+        {
+            "name": "mayur",
+            "address": "ahmedabad",
+            "email": "mayur@gmail.com",
+            "contact": "1234567890",
+            "id": "3"
+        }
+    ]
+}
