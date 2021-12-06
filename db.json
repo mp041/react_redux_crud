@@ -18,7 +18,7 @@
   },
   "user": [
     {
-      "name": "mihir",
+      "name": "panchal",
       "address": "ahmedabad",
       "email": "mihir@gmail.com",
       "contact": "1234567890",
@@ -37,6 +37,13 @@
       "email": "mihir@gmail.com",
       "contact": "1234567890",
       "id": "3"
+    },
+    {
+      "name": "sasuke",
+      "address": "patel",
+      "email": "dhruv@gmail.com",
+      "contact": "098765424",
+      "id": "jKwCXdW"
     }
   ]
 }

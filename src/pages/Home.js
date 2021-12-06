@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteUser, loadUsers } from '../redux/actions';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import { useHistory } from 'react-router';
 
 
 const useBtnStyles = makeStyles((theme) => ({
@@ -70,6 +71,7 @@ const Home = () => {
     const btn = useBtnStyles();
     const dispatch = useDispatch();
     const { users } = useSelector((state) => state.user)
+    const history = useHistory();
 
     useEffect(() => {
         dispatch(loadUsers());
@@ -81,7 +83,10 @@ const Home = () => {
         }
     }
     return (
-        <>
+        <>  
+                <div className={btn.root}>
+                 <Button style={{marginTop: "50px"}} variant="contained" onClick={()=> history.push('/addUser')} color="primary">Add User</Button>
+                 </div>
             <TableContainer component={Paper}>
                 <Table className={classes.table} aria-label="customized table">
                     <TableHead>
@@ -106,7 +111,7 @@ const Home = () => {
                                 <div className={btn.root}>
                                     <ButtonGroup variant="contained" aria-label="contained primary button group">
                                         <Button style={{marginRight : "5px"}} color="secondary" onClick = {() => handleDelete(row.id)} >Delete</Button>
-                                        <Button color="primary">Edit</Button>
+                                        <Button color="primary" onClick={() => history.push(`/editUser/${row.id}`)}>Edit</Button>
                                         
                                     </ButtonGroup>
                                 </div>
